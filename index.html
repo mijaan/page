@@ -25,11 +25,12 @@ $.ajax(settings).done(function (response) {
 	<a href="https://github.com/jeromeetienne/AR.js/" target="_blank">AR.js</a> - example for a-frame
 	<br/>
 	Contact me any time at <a href='https://twitter.com/jerome_etienne' target='_blank'>@jerome_etienne</a>
-	
-<div id="windSpeed">Wind speed: </div>
-<div id="currentWeather">Current weather conditions: </div>
-	
 	</div>
+	
+<div id="windSpeed">Wind speed: style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'> </div>
+<div id="currentWeather">Current weather conditions: style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'> </div>
+	
+	
 
 	
 	<a-scene embedded arjs='sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
