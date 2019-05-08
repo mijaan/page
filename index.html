@@ -26,6 +26,9 @@ $.ajax(settings).done(function (response) {
 	<br/>
 	Contact me any time at <a href='https://twitter.com/jerome_etienne' target='_blank'>@jerome_etienne</a>
 </div>
+	<div id="windSpeed">Wind speed: </div>
+<div id="currentWeather">Current weather conditions: </div>
+	
 	<a-scene embedded arjs='sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 		<!-- handle unknown marker -->
 		<!-- <a-marker type='unknown'>
@@ -66,8 +69,6 @@ $.ajax(settings).done(function (response) {
 		<a-entity camera></a-entity>
 	</a-scene>
 	
-	<div id="windSpeed">Wind speed: </div>
-<div id="currentWeather">Current weather conditions: </div>
-	
+
 </body>
 </html>
