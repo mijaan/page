@@ -5,7 +5,7 @@
 <script src="scripts/aframe-ar.js"></script>
 <script src="scripts/aframe-text-geometry-component.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+	
 <script>
 var settings = {
 url: "https://cis.chemi-pharm.com/digital-factory/batch/801",
@@ -84,11 +84,12 @@ $.ajax(settings).done(function (response) {
 				</a-torus-knot>
 			</a-box>
 				<a-entity rotation="-80 0 0" position="0.2 0.5 0"  text-geometry="value: barcode2"></a-entity>
+			<a-text id="textField" position="0 5 -2" value="Hello World"></a-text>	
 		</a-marker>
 		
 		<!-- add a simple camera -->
 		<a-entity camera></a-entity>
-<a-text id="textField" position="0 5 -2" value="Hello World"></a-text>	
+
 </a-scene>
 	
 
