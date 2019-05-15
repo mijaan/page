@@ -67,7 +67,7 @@ AFRAME.registerComponent('clock-text', {
 		<a-marker type='barcode' value='2'>
 			<a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:pink;'>
 				<a-entity position="1 0 0" scale="3 3 3" text="value: HELLO;color:black" id="text">
-				<a-text id="clock" clock-text value="00:00" position="2.45 0 0.01" color="#FFFFFF"></a-text>	
+				<a-entity id="clock" clock-text text="value: 00.00" position="1 0 0" color="#FFFFFF"></a-entity>	
 				</a-entity>
 				<!--a-entity position="1 0 0" scale="3 3 3" text="width: 4; color: #000; 'value: test text'"></a-entity-->
 			</a-box>
