@@ -47,7 +47,11 @@ $.ajax(settings).done(function (response) {
 			<!-- handle matrix marker 2 -->
 		<a-marker type='barcode' value='2'>
 			<a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:pink;'>
-				<a-entity position="1 0 0" scale="3 3 3" text="value: HELLO($windSpeed);color:black"></a-entity>
+				<a-entity position="1 0 0" scale="3 3 3" text="value: HELLO;color:black id="text"">
+			<script>
+			text = document.querySelector('#text); text.setAttribute('text','bla',1);
+			</script>	
+				</a-entity>
 				<!--a-entity position="1 0 0" scale="3 3 3" text="width: 4; color: #000; 'value: test text'"></a-entity-->
 			</a-box>
 				<a-entity rotation="-80 0 0" position="0.2 0.5 0"  text-geometry="value: barcode2 "></a-entity>
