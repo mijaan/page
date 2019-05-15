@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<head>
 <script src="scripts/aframe.min.js"></script>
 <!-- include aframe-ar.js -->
 <script src="scripts/aframe-ar.js"></script>
@@ -22,6 +23,27 @@ $.ajax(settings).done(function (response) {
 });
 </script>
 
+	<script>
+   AFRAME.registerComponent('click-listener', {
+     init: function() {
+       var clicked = false;
+       this.el.addEventListener('click', function(evt) {
+       var textField = document.querySelector("#textField");
+       clicked = !clicked;
+       if (clicked) {
+         pos = camera.getAttribute("position").toString();
+         textField.setAttribute('text', {"value": "Clicked"});
+       }
+       else {
+         textField.setAttribute('text', {"value": "Unclicked"});
+       }
+          
+     });
+   }
+ });
+</script>
+</head>
+	
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'><div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
 	<a href="https://github.com/jeromeetienne/AR.js/" target="_blank">AR.js</a> - example for a-frame
 	<br/>
@@ -66,7 +88,9 @@ $.ajax(settings).done(function (response) {
 		
 		<!-- add a simple camera -->
 		<a-entity camera></a-entity>
-	</a-scene>
+<a-scene click-listener> 
+<a-text id="textField" position="0 5 -2" value="Hello World"></a-text>	
+</a-scene>
 	
 
 </body>
