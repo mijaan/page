@@ -23,6 +23,25 @@ $.ajax(settings).done(function (response) {
 });
 </script>
 
+<script>
+AFRAME.registerComponent('clock-text', {
+  init: function() {
+    var el = this.el;
+    this.ready = false;
+      el.addEventListener('textfontset', function() {
+      this.ready = true;
+    }.bind(this));
+  },
+  tick: function() {
+    var el = this.el;
+    if (!this.ready) {
+      return;
+    }
+    el.setAttribute('value', '20:30');
+  }
+});
+</script>
+	
 </head>
 	
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'><div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
@@ -48,9 +67,7 @@ $.ajax(settings).done(function (response) {
 		<a-marker type='barcode' value='2'>
 			<a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:pink;'>
 				<a-entity position="1 0 0" scale="3 3 3" text="value: HELLO;color:black" id="text">
-			<script>
-			text = document.querySelector('#text'); text.setAttribute('value','bla');
-			</script>	
+				<a-text id="clock" clock-text value="00:00" position="2.45 0 0.01" color="#FFFFFF"></a-text>	
 				</a-entity>
 				<!--a-entity position="1 0 0" scale="3 3 3" text="width: 4; color: #000; 'value: test text'"></a-entity-->
 			</a-box>
