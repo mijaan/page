@@ -50,7 +50,18 @@ $.ajax(settings).done(function (response) {
 	Contact me any time at <a href='https://twitter.com/jerome_etienne' target='_blank'>@jerome_etienne</a>
 	</div>
 	
-	<a-scene click-listener embedded arjs='sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+	AFRAME.registerComponent('update-text-every-second', {
+  init: function () {
+    var el = this.el;
+    var i = 0;
+
+    setInterval(function () {
+      el.setAttribute('text', 'text', i.toString());
+    }, 1000);
+  }
+});
+	
+	<a-scene embedded arjs='sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 		<!-- handle unknown marker -->
 		<!-- <a-marker type='unknown'>
 			<a-box depth="1" height="1" width="1" position='0 0.5 0' material='opacity: 0.5; side:double; color:blue;'></a-box>
@@ -80,7 +91,7 @@ $.ajax(settings).done(function (response) {
 		<a-marker type='barcode' value='2'>
 			<a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:pink;'>
 				<a-entity position="1 0 0" scale="3 3 3" text="value: HELLO;color:black"></a-entity>
-				<a-text position="1 0 0" scale="3 3 3" id="textField" position="0 5 -2" value="Hello World"></a-text>
+				<a-entity position="1 0.2 0" scale="3 3 3" text="text: 0" update-text-every-second></a-entity>
 			</a-box>
 				<a-entity rotation="-80 0 0" position="0.2 0.5 0"  text-geometry="value: barcode2"></a-entity>
 		</a-marker>
