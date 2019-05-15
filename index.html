@@ -23,25 +23,14 @@ $.ajax(settings).done(function (response) {
 });
 </script>
 
-	<script>
-   AFRAME.registerComponent('click-listener', {
-     init: function() {
-       var clicked = false;
-       this.el.addEventListener('click', function(evt) {
-       var textField = document.querySelector("#textField");
-       clicked = !clicked;
-       if (clicked) {
-         pos = camera.getAttribute("position").toString();
-         textField.setAttribute('text', {"value": "Clicked"});
-       }
-       else {
-         textField.setAttribute('text', {"value": "Unclicked"});
-       }
-          
-     });
-   }
- });
-</script>
+<script type="text/javascript" charset="utf-8">
+function toggleVerticalAxis(){
+      let button = document.querySelector('#toggle-axis a-text');
+      rotateOnY = !rotateOnY;
+      button.setAttribute('text', `value: Toggle Axis (${rotateOnY? 'y' : 'z' })`);
+    }
+  </script>	
+	
 </head>
 	
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'><div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
@@ -50,18 +39,6 @@ $.ajax(settings).done(function (response) {
 	Contact me any time at <a href='https://twitter.com/jerome_etienne' target='_blank'>@jerome_etienne</a>
 	</div>
 	
-<script>	
-	AFRAME.registerComponent('update-text-every-second', {
-  init: function () {
-    var el = this.el;
-    var i = 0;
-
-    setInterval(function () {
-      el.setAttribute('text', 'text', i.toString());
-    }, 1000);
-  }
-});
-</script>	
 	
 	<a-scene embedded arjs='sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 		<!-- handle unknown marker -->
@@ -94,7 +71,14 @@ $.ajax(settings).done(function (response) {
 			<a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:pink;'>
 				<!--a-entity position="1 0 0" scale="3 3 3" text="value: HELLO;color:black"></a-entity -->
 				<a-entity position="1 0 0" scale="3 3 3" text="width: 4; color: #000; value: test text" id="text"></a-entity>
-			      
+<a-plane id="toggle-axis" class="clickable" color="grey" width="2" height="2" position="0 -4 -10"
+      onclick="toggleVerticalAxis()">
+      <a-text
+        color="#000000"
+        text="value: Toggle Axis (y)"
+        position="-0.6 0.2 0.3">
+      </a-text>
+    </a-plane>
 			</a-box>
 				<a-entity rotation="-80 0 0" position="0.2 0.5 0"  text-geometry="value: barcode2"></a-entity>
 		</a-marker>
