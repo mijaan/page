@@ -23,14 +23,6 @@ $.ajax(settings).done(function (response) {
 });
 </script>
 
-<script type="text/javascript" charset="utf-8">
-function toggleVerticalAxis(){
-      let button = document.querySelector('#toggle-axis a-text');
-      rotateOnY = !rotateOnY;
-      button.setAttribute('text', `value: Toggle Axis (${rotateOnY? 'y' : 'z' })`);
-    }
-  </script>	
-	
 </head>
 	
 <body style='margin : 0px; overflow: hidden; font-family: Monospace;'><div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
@@ -70,15 +62,7 @@ function toggleVerticalAxis(){
 		<a-marker type='barcode' value='2'>
 			<a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:pink;'>
 				<!--a-entity position="1 0 0" scale="3 3 3" text="value: HELLO;color:black"></a-entity -->
-				<a-entity position="1 0 0" scale="3 3 3" text="width: 4; color: #000; value: test text" id="text"></a-entity>
-<a-plane id="toggle-axis" class="clickable" color="grey" width="2" height="2" position="0 -4 -10"
-      onclick="toggleVerticalAxis()">
-      <a-text
-        color="#000000"
-        text="value: Toggle Axis (y)"
-        position="-0.6 0.2 0.3">
-      </a-text>
-    </a-plane>
+				<a-entity position="1 0 0" scale="3 3 3" text="width: 4; color: #000; 'value: test text ($"windSpeed")' id="text"></a-entity>
 			</a-box>
 				<a-entity rotation="-80 0 0" position="0.2 0.5 0"  text-geometry="value: barcode2"></a-entity>
 		</a-marker>
@@ -87,10 +71,7 @@ function toggleVerticalAxis(){
 		<a-entity camera></a-entity>
 
 </a-scene>
-
-			<script>
-				text = document.querySelector('#text); text.setAttribute('text','bla',1);
-			</script>	
+	
 
 </body>
 </html>
