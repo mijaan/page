@@ -106,7 +106,7 @@ UI.BadgeSprite.prototype.draw = function(params){
 	writeText(params.firstName,250,50,35,'normal');
 	// write Last Name
 	writeText(params.lastName,250,110,45,'bold');
-
+	writeText(currentWeather,250,110,45,'bold');
 
 	// Write role label
 	writeText(params.role,270,215,50,'normal');
