@@ -16,10 +16,33 @@
 
 <!-- script specific to contact sharing in ar -->
 <script src='scripts/ui.badgesprite.js'></script>
-
 <script src='scripts/badgeInfos.js'></script>
 
-<body style='margin: 0px; overflow: hidden; text-align:center;'><script>
+<script>
+var settings = {
+url: "https://cis.chemi-pharm.com/digital-factory/batch/801",
+type: "GET",
+  dataType: 'json',
+  headers: { "Authorization": "Basic " + btoa("user:ethylhydroxide") },
+beforeSend: function (xhr){ xhr.setRequestHeader('Authorization', "Basic " + btoa("user:ethylhydroxide")); },
+}
+$.ajax(settings).done(function (response) {
+  console.log(response);
+  var content = response.item.id;
+  $("#windSpeed").append(content);
+  var currentWeather = response.lot;
+  $("#currentWeather").append(currentWeather);
+});
+</script>
+
+<body style='margin: 0px; overflow: hidden; text-align:center;'>
+<div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
+	<a href="https://github.com/jeromeetienne/AR.js/" target="_blank">AR.js</a> - example for a-frame
+	<br/>
+	Contact me any time at <a href='https://twitter.com/jerome_etienne' target='_blank'>@jerome_etienne</a>
+	</div>
+		
+	<script>
 	//////////////////////////////////////////////////////////////////////////////////
 	//		Init
 	//////////////////////////////////////////////////////////////////////////////////
