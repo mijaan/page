@@ -68,7 +68,9 @@
 
       // try to get user media
       navigator.getUserMedia(constraints, function(stream) {
-        domElement.src = URL.createObjectURL(stream);
+        // VANA KOOD domElement.src = URL.createObjectURL(stream);
+        // EXAMPLE self.video.src = URL.createObjectURL(localStream);        
+          domElement.srcObject = localStream;
       }, function(error) {
         console.error("Cant getUserMedia()! due to ", error);
       });
