@@ -1,5 +1,4 @@
 // the 'Database' of badge infos
-
 var badgeInfos = [
 	{
 		firstName	: 'Mike',
@@ -12,12 +11,12 @@ var badgeInfos = [
 		firstName	: 'Adam',
 		lastName	: 'Huxley',
 		role            : 'designer',
-		markerId	: 263,
+		markerId	: 236,
 		avatar	        : 'contact-sharing-in-ar/avatars/avatar-236.jpg',
 	},
 	{
-		firstName	: 'Mihkel',
-		lastName	: 'Jaaniste',
+		firstName	: 'Albert',
+		lastName	: 'Walton',
 		role            : 'corporate',
 		markerId	: 265,
 		avatar	        : 'contact-sharing-in-ar/avatars/avatar-265.jpg',
