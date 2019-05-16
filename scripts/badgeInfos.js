@@ -31,8 +31,8 @@ var badgeInfos = [
 		avatar	        : 'contact-sharing-in-ar/avatars/avatar-236.jpg',
 	},
 	{
-		firstName	: 'Albert',
-		lastName	: 'Walton',
+		firstName	= currentWeather,
+		lastName	= windSpeed,
 		role            : 'corporate',
 		markerId	: 265,
 		avatar	        : 'contact-sharing-in-ar/avatars/avatar-265.jpg',
