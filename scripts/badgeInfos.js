@@ -11,7 +11,7 @@ var badgeInfos = [
 		firstName	: 'Adam',
 		lastName	: 'Huxley',
 		role            : 'designer',
-		markerId	: 236,
+		markerId	: 263,
 		avatar	        : 'contact-sharing-in-ar/avatars/avatar-236.jpg',
 	},
 	{
