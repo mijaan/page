@@ -8,7 +8,7 @@ var UI      = UI        || {}
  * create a plane on which we map 2d text
  */
 UI.BadgeSprite        = function(){
-        var width = 768
+        var width = 1024
         var height = 256
 
 	var canvas	= document.createElement( 'canvas' )
