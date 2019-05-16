@@ -114,7 +114,7 @@ UI.BadgeSprite.prototype.draw = function(params){
 	}else if(params.role.toLowerCase() === 'industry'){
 		iconObject.src = '/examples/contact-sharing-in-ar/role-icons/industry.png';
 	}else{
-		iconObject.src = '/examples/contact-sharing-in-ar/role-icons/other.png';
+		iconObject.src = 'source/Chemi.png';
 	}
 
 
