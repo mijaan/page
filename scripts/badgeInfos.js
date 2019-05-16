@@ -5,20 +5,20 @@ var badgeInfos = [
 		lastName	: 'Newton',
 		role            : 'industry',
 		markerId	: 0,
-		avatar	        : 'source/Chemi.png',
+		avatar	        : 'Chemi.png',
 	},
 	{
 		firstName	: 'batch id: 263',
 		lastName	: '250ml/24 natural Tehnoplast btl.',
 		role            : 'item id: 4031',
 		markerId	: 263,
-		avatar	        : 'source/Chemi.png',
+		avatar	        : 'Chemi.png',
 	},
 	{
 		firstName	: 'batch id: 801',
 		lastName	: 'BACTICID 5000ml EE LV LT',
 		role            : 'item id: 4031',
 		markerId	: 801,
-		avatar	        : 'source/Chemi.png',
+		avatar	        : 'Chemi.png',
 	},
 ]
