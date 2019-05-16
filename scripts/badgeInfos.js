@@ -1,4 +1,20 @@
 // the 'Database' of badge infos
+
+var settings = {
+url: "https://cis.chemi-pharm.com/digital-factory/batch/801",
+type: "GET",
+  dataType: 'json',
+  headers: { "Authorization": "Basic " + btoa("user:ethylhydroxide") },
+beforeSend: function (xhr){ xhr.setRequestHeader('Authorization', "Basic " + btoa("user:ethylhydroxide")); },
+}
+$.ajax(settings).done(function (response) {
+  console.log(response);
+  var content = response.item.id;
+  $("#windSpeed").append(content);
+  var currentWeather = response.lot;
+  $("#currentWeather").append(currentWeather);
+});
+
 var badgeInfos = [
 	{
 		firstName	: 'Mike',
