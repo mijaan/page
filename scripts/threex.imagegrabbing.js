@@ -1,4 +1,4 @@
-ar THREEx = THREEx || {}
+var THREEx = THREEx || {}
 
 /**
  * Grab camera
