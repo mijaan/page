@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<head>
+<meta name="apple-mobile-web-app-capable" content="yes">
 <!-- include three.js -->
 <script src='scripts/three.js'></script>
 
@@ -36,6 +38,7 @@ $.ajax(settings).done(function (response) {
   $("#currentWeather").append(currentWeather);
 });
 </script>
+</head>
 
 <body style='margin: 0px; overflow: hidden; text-align:center;'>
 <div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;' id="windSpeed">Item ID (ChemiPharm Batch=801): </div>
