@@ -1,9 +1,9 @@
 // the 'Database' of badge infos
 var badgeInfos = [
 	{
-		firstName	: 'Mike',
-		lastName	: 'Newton',
-		role            : 'industry',
+		firstName	: 'batch id: ...',
+		lastName	: 'ZZ zzzzz ZZZZZZ',
+		role            : 'item id: nnnnn',
 		markerId	: 0,
 		avatar	        : 'scripts/chemi.jpg',
 	},
