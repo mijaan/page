@@ -27,8 +27,8 @@ var settings = {
 url: "https://cis.chemi-pharm.com/digital-factory/batch/801",
 type: "GET",
   dataType: 'json',
-  headers: { "Authorization": "Basic " + btoa("user:ethylhydroxide") },
-beforeSend: function (xhr){ xhr.setRequestHeader('Authorization', "Basic " + btoa("user:ethylhydroxide")); },
+  headers: { "Authorization": "Basic " + btoa("user:password") },
+beforeSend: function (xhr){ xhr.setRequestHeader('Authorization', "Basic " + btoa("user:password")); },
 }
 $.ajax(settings).done(function (response) {
   console.log(response);
@@ -42,7 +42,7 @@ $.ajax(settings).done(function (response) {
 
 <body style='margin: 0px; overflow: hidden; text-align:center;'>
 <div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;' id="windSpeed">Item ID (ChemiPharm Batch=801): </div>
-<div id="currentWeather">Lot number: </div>	
+<div id="currentWeather">Authentication required! Sensitive data: </div>	
 		
 	<script>
 	//////////////////////////////////////////////////////////////////////////////////
