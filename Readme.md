@@ -1,9 +1,11 @@
 ---
 permalink: /index.html
 
+
 Barcode generator:
 http://chev.me/arucogen/
 Barcode examples: generate 263 and 801
+-neid generaatoreid on open source ja ka siin github'is-
 
 Taltech project, group 9.
 -No sensitive data exposed-
