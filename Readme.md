@@ -1,6 +1,7 @@
 ---
 permalink: /index.html
 
+Barcode generator:
 http://chev.me/arucogen/
 Barcode examples: generate 263 and 801
 
