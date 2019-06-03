@@ -1,6 +1,9 @@
 ---
 permalink: /index.html
 
+http://chev.me/arucogen/
+Barcode examples: generate 263 and 254
+
 Taltech project, group 9.
 -No sensitive data exposed-
 
