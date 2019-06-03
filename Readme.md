@@ -1,8 +1,6 @@
 ---
 permalink: /index.html
 
-
-
 Taltech project, group 9.
 -No sensitive data exposed-
 
